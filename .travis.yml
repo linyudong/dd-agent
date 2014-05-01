@@ -60,3 +60,11 @@ script:
 notifications:
   webhooks:
     - https://www.buildheroes.com/api/projects/1fa0bf90eb6f781bf067c82439775fd9d896c0ae/builds
+matrix:
+  exclude:
+    - rvm: 1.8.7
+      gemfile: gemfiles/Gemfile.rails-2.3.x
+      env: ISOLATED=true
+    - rvm: jruby
+      gemfile: gemfiles/Gemfile.rails-2.3.x
+      env: ISOLATED=true
