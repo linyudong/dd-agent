@@ -5,7 +5,7 @@ branches:
 services:
   - mysql
   - elasticsearch
-  - memcached
+  - memcache	
   - redis-server
 before_script:
   - mysql -e "create user 'dog'@'localhost' identified by 'dog'"
